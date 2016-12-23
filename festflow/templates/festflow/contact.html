@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacts</title>
+</head>
+<body>
+  {% for contact in all_contacts %}
+  <div>
+    <a href="{{contact.contactURL}}" target="_blank">
+      <div>
+        {% if contact.avatar_img %}
+        <img src="{{contact.avatar_img.url}}">
+        {% endif %}
+        <span>{{contact.name}}</span>
+        <a href="tel:{{contact.contactNumber}}">
+          <span>{{contact.contactNumber}}</span>
+        </a>
+        <a href="mailto:{{contact.emailId}}">
+          <span>
+            {{contact.emailId}}
+          </span>
+        </a>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</body>
+</html>

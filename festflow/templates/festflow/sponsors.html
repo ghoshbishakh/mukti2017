@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sponsors</title>
+</head>
+<body>
+
+
+    {% for sponsor in all_sponsors %}
+    <div>
+        <img src="{{sponsor.logo.url}}">
+    </div>
+    {% endfor %}
+
+</body>
+</html>

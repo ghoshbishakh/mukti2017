@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABOUT PAGE</title>
+</head>
+<body>
+    {% if content %}
+        {{ content | safe }}
+    {% else %}
+        ABOUT PAGE
+    {% endif %}
+</body>
+</html>

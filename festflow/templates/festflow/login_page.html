@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+
+
+	{% if user.is_authenticated %}
+	<!--User is logged in-->
+	<p>You are logged in as : <i> {{ user.username }}</i> !</p>
+	<p>First Name: <strong>{{ user.first_name }}</strong></p>
+	<p>Last Name: <strong>{{ user.last_name }}</strong></p>
+	<p>Email: {{ user.email }}</p>
+	<a href="/logout"><button> LogOut</button></a>
+	{% else %}
+
+	<!--User is not logged in-->
+	<h2>Register NOW!</h2>
+
+	<a href="/login/facebook/?next=/">
+		<span>Sign in with facebook</span>
+	</a>
+	<a href="/login/google-oauth2/?next=/">
+		<span>Sign in with google</span>
+	</a>
+	{% endif %}
+
+</body>
+</html>
