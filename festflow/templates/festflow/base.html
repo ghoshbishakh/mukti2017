@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Mukti 2017</title>
+
+	<!-- LOAD CSS AND BASIC JS -->
+
+	<!-- Foundation css -->
+	<link rel="stylesheet" href="{% static "css/foundation.min.css" %}">
+
+	<!-- Jquery minified JavaScript -->
+	<script src="{% static "js/jquery.min.js" %}"></script>
+
+	<!-- THEME CSS FILE -->
+	<link rel="stylesheet" href="{% static "css/theme/normalize.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/pageloader.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/ionicons.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/main.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/main_responsive.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/style-font1.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/jquery.fullPage.css" %}">
+	<link rel="stylesheet" href="{% static "css/theme/vegas.min.css" %}">
+
+	<!-- THEME JS FILES -->
+	<script src="{% static "js/theme/vendor/all.js" %}"></script>
+	<script src="{% static "js/theme/vendor/modernizr-2.7.1.min.js" %}"></script>
+	<script src="{% static "js/theme/jquery.downCount.js" %}"></script>
+	<script src="{% static "js/theme/form_script.js" %}"></script>
+	<script src="{% static "js/theme/main.js" %}"></script>
+
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="{% static "css/main.css" %}">
+
+</head>
+<body>
+
+	<!-- Page Loader -->
+	<div class="page-loader" id="page-loader" style="background-color:white;">
+		<div>
+			<img src="{% static "images/loader.gif" %}" alt="">
+			<!--<i class="ion ion-loading-d"></i>-->
+			<p>A P A R E C I U M</p>
+		</div>
+	</div>
+	{% block body_contents %}{% endblock %}
+
+</body>
+</html>
