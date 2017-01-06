@@ -1,71 +1,32 @@
-@keyframes logo-glow {
-    0%   {transform: scale(1); text-shadow: 0em 0em 0em #fff;}
-    20%  {transform: scale(1.005); text-shadow: 0em 0em 0.15em #fff;}
-    40%  {transform: scale(1.01); text-shadow: 0em 0em 0.20em #aee5ff;}
-    60%  {transform: scale(1.005); text-shadow: 0em 0em 0.25em #0daffb;}
-    100% {transform: scale(1); text-shadow: 0em 0em 0em #0daffb;}
-}
-
-h1, h2, h3, h4, p {
-	color: #fff;
-}
-
-@font-face {
-  font-family: 'harryPotter';
-  src: url('../fonts/HARRP.ttf')
-}
 
 body {
 	background: #000;
 }
 
-.heading {
-	font-family: harryPotter;
+/* Carousel css starts */
+
+* { box-sizing: border-box; }
+
+.carousel {
+  background: transparent;
 }
 
-#page-container {
-	overflow: auto;
+.carousel-cell {
+  width: 50%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
 }
 
-.page-section {
-	width: 100%;
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
-
-.full-section {
-	width: 100%;
-	min-height: 100vh;
-}
-
-.magic-font {
-	font-family: harryPotter;
-}
-
-#main-logo {
-	width: 90%;
-	font-size: 5em;
-	padding-top: 2em;
-	color: #fff;
-	text-shadow: 0em 0em 0.2em #0daffb;
-	animation-name: logo-glow;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-#background-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: url('../images/bg3.jpg');
-	background-size: cover;
-	background-position: bottom;
-	z-index: -1;
-}
-
-#about-section {
-	background: url('../images/bg4.jpg');
-	background-size: cover;
-	background-position: top;
-}
+/*Carousel css ends */
