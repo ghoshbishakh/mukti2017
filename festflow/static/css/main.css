@@ -1,19 +1,19 @@
 @keyframes glow {
-  0%   {-webkit-filter: drop-shadow(0px 0px 0px #fff); filter: drop-shadow(0px 0px 0px #fff);}
-  50%  {-webkit-filter: drop-shadow(0px 0px 5px #DDEBF9); filter: drop-shadow(0px 0px 5px #DDEBF9); transform: scale(1.02);}
-  100% {-webkit-filter: drop-shadow(0px 0px 0px #fff); filter: drop-shadow(0px 0px 0px #fff);}
+	0%   {-webkit-filter: drop-shadow(0px 0px 0px #fff); filter: drop-shadow(0px 0px 0px #fff);}
+	50%  {-webkit-filter: drop-shadow(0px 0px 5px #DDEBF9); filter: drop-shadow(0px 0px 5px #DDEBF9); transform: scale(1.02);}
+	100% {-webkit-filter: drop-shadow(0px 0px 0px #fff); filter: drop-shadow(0px 0px 0px #fff);}
 }
 
 @keyframes shadowGlow {
-  0% {box-shadow: 0 0 0px 0px #fff;}
-  50% {box-shadow: 0 0 4px 0px #fff; transform: scale(1.3);}
-  100% {box-shadow: 0 0 0px 0px #fff;}
+	0% {box-shadow: 0 0 0px 0px #fff;}
+	50% {box-shadow: 0 0 4px 0px #fff; transform: scale(1.3);}
+	100% {box-shadow: 0 0 0px 0px #fff;}
 }
 
 @keyframes fadeOut {
-  0% {opacity: 0.8}
-  50% {opacity: 0.5}
-  100% {opacity: 0.0}
+	0% {opacity: 0.8}
+	50% {opacity: 0.5}
+	100% {opacity: 0.0}
 }
 
 
@@ -23,58 +23,81 @@ body {
 }
 
 /* Carousel css starts */
+.content {
+	margin: 50px 10%;
+}
 
 * { box-sizing: border-box; }
 
-.carousel {
-  background: transparent;
+.sliderx {
+	width: 100%;
+	margin: 0px auto;
 }
 
-.carousel-cell {
-  width: 50%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
+.slick-slide {
+	margin: 10px 10px;
+	background: rgba(255,255,255,0.15);
+	transition: all 0.5s;
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+.slick-slide :hover {
+	background: rgba(255,255,255,0.15);
+	box-shadow: 0 0 0.6em -0.2em #fff;
+	transition: all 0.5s;
 }
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+
+.event-slide-wrapper img {
+	max-width: 100%;
+}
+
+.event-carousal-name {
+	margin: 0.1em;
+	color: #fff;
+	text-align: center;
+	font-family: 'Opensans';
+	font-size: 1.4em;
+}
+
+.event-slide-wrapper {
+	padding: 0.1em;
+}
+
 /*Carousel css ends */
 
 #landing_logo {
- -webkit-filter: drop-shadow(0px 0px 2px #fff);
- filter: drop-shadow(0px 0px 2px #fff);
- animation-name: glow;
- animation-duration: 4s;
- animation-iteration-count: infinite;
+	-webkit-filter: drop-shadow(0px 0px 2px #fff);
+	filter: drop-shadow(0px 0px 2px #fff);
+	animation-name: glow;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 #next_page_circle {
-  animation-delay: 2s;
-  animation-name: shadowGlow;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-name: shadowGlow;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 #particle-canvas {
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  animation-delay: 4s;
-  animation-name: fadeOut;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	animation-delay: 4s;
+	animation-name: fadeOut;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }

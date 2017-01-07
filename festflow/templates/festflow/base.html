@@ -3,7 +3,9 @@
 <html>
 <head>
 	<title>{% block title %}Mukti 2017{% endblock %}</title>
-
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- LOAD CSS AND BASIC JS -->
 
 	<!-- Foundation css -->
@@ -21,12 +23,16 @@
 	<link rel="stylesheet" href="{% static "css/theme/style-font1.css" %}">
 	<link rel="stylesheet" href="{% static "css/theme/jquery.fullPage.css" %}">
 	<link rel="stylesheet" href="{% static "css/theme/vegas.min.css" %}">
-
+	<!-- Ion icons css CDN-->
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="{% static "css/main.css" %}">
 	<!--Carousel css-->
-	<link rel="stylesheet" href="{% static "css/flickity.css" %}">
-
+	<link rel="stylesheet" href="{% static "slick/slick.css" %}">
+	<link rel="stylesheet" href="{% static "slick/slick-theme.css" %}">
+	<!-- This css have put to add hover effects incase we add any -->
+	<link rel="stylesheet" href="{% static "css/aero-hover-effects.css" %}">
+	<!-- -->
 </head>
 <body>
 
@@ -39,25 +45,77 @@
 		</div>
 	</div>
 	<!--Page loader ends-->
+	<!-- BEGIN OF site header Menu -->
+	<header class="header-top">
+		<div class="logo">
+			<a href="#home">
+				<img style="height:70px;" src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
+			</a>
+		</div>
+		<div class="menu clearfix">
+			<a href="#when">when</a>
+			<!-- Add other menu similar to "about" here -->
+			<a href="#contact">contact</a>
+		</div>
+	</header>
+	<!-- END OF site header Menu-->
 
+	<!-- Start of sidebar-->
+	<nav class="quick-link count-6 nav-left">
+		<ul id="qmenu">
+			<li data-menuanchor="home" class="active">
+				<a href="#home" class=""><i class="icon ion ion-home"></i>
+				</a>
+				<span class="title">Home page</span>
+			</li>
+			<li data-menuanchor="when" class="">
+				<a href="#when" class=""><i class="icon ion ion-clock"></i>
+				</a>
+				<span class="title">When</span>
+			</li>
+			<li data-menuanchor="keynote" class="">
+				<a href="#keynote"><i class="icon ion ion-compose"></i>
+				</a>
+				<span class="title">Keynote</span>
+			</li>
+			<li data-menuanchor="events" class="">
+				<a href="#events"><i class="icon ion ion-play"></i>
+				</a>
+				<span class="title">Events</span>
+			</li>
+			<li data-menuanchor="about" class="">
+				<a href="#about"><i class="icon ion ion-information"></i>
+				</a>
+				<span class="title">About us</span>
+			</li>
+			<li data-menuanchor="contact" class="">
+				<a href="#contact"><i class="icon ion ion-android-call"></i>
+				</a>
+				<span class="title">Write to us</span>
+			</li>
+		</ul>
+	</nav>
+	<!-- End of Sidebar-->
 	<!--Cover Pic-->
 	<div class="page-cover" id="home">
-            <!-- Cover Background -->
-            <div class="cover-bg pos-abs full-size bg-img" data-image-src={% static "images/bgh1.jpg" %}><div class="layer">
-    </div></div>
-        </div>
-     <!--Cover pic ends-->
+		<!-- Cover Background -->
+		<div class="cover-bg pos-abs full-size bg-img" data-image-src={% static "images/bgh1.jpg" %}>
+			<div class="layer">
+			</div>
+		</div>
+	</div>
+	<!--Cover pic ends-->
 	{% block body_contents %}{% endblock %}
 
 </body>
-<!--Carousel js-->
-<script src="{% static "js/flickity.pkgd.min.js" %}"></script>
 <!-- THEME JS FILES -->
 <script src="{% static "js/theme/vendor/all.js" %}"></script>
 <script src="{% static "js/theme/vendor/modernizr-2.7.1.min.js" %}"></script>
 <script src="{% static "js/theme/jquery.downCount.js" %}"></script>
 <script src="{% static "js/theme/form_script.js" %}"></script>
 <script src="{% static "js/theme/main.js" %}"></script>
+<!--Carousel js-->
+<script src="{% static "slick/slick.min.js" %}"></script>
 
 <!-- extra JS -->
 {% block extrajs %}{% endblock %}

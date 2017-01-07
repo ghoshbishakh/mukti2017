@@ -30,7 +30,7 @@ function loadScene() {
   //    Check whether the WebGL context is available or not
   //    if it's not available exit
   if (!gl) {
-    alert("There's no WebGL context available.");
+    console.log("There's no WebGL context available.");
     return;
   }
   //    Set the viewport to the canvas width and height
@@ -52,7 +52,7 @@ function loadScene() {
   gl.shaderSource(vertexShader, vertexShaderScript.text);
   gl.compileShader(vertexShader);
   if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
-    alert("Couldn't compile the vertex shader");
+    console.log("Couldn't compile the vertex shader");
     gl.deleteShader(vertexShader);
     return;
   }
@@ -64,7 +64,7 @@ function loadScene() {
   gl.shaderSource(fragmentShader, fragmentShaderScript.text);
   gl.compileShader(fragmentShader);
   if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-    alert("Couldn't compile the fragment shader");
+    console.log("Couldn't compile the fragment shader");
     gl.deleteShader(fragmentShader);
     return;
   }
@@ -75,7 +75,7 @@ function loadScene() {
   gl.attachShader(gl.program, fragmentShader);
   gl.linkProgram(gl.program);
   if (!gl.getProgramParameter(gl.program, gl.LINK_STATUS)) {
-    alert("Unable to initialise shaders");
+    console.log("Unable to initialise shaders");
     gl.deleteProgram(gl.program);
     gl.deleteProgram(vertexShader);
     gl.deleteProgram(fragmentShader);
@@ -199,7 +199,7 @@ function loadScene() {
   //     Get the vertex position attribute location from the shader program
   var vertexPosAttribLocation = gl.getAttribLocation(gl.program, "vertexPosition");
   //				colorLoc = gl.getVaryingLocation(gl.program, "vColor");
-  //				alert("color loc : " + colorLoc );
+  //				console.log("color loc : " + colorLoc );
   //     Specify the location and format of the vertex position attribute
   gl.vertexAttribPointer(vertexPosAttribLocation, 3.0, gl.FLOAT, false, 0, 0);
   //gl.vertexAttribPointer(colorLoc, 4.0, gl.FLOAT, false, 0, 0);

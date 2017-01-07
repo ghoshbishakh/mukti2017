@@ -10,88 +10,88 @@
 		<!-- Logo -->
 		<!--<div class="logo-container">
 			
-		</div>-->
-		<!-- Content -->
-		<section class="content">
+	</div>-->
+	<!-- Content -->
+	<section class="content">
+		<header class="header">
+
+			<img class="img-responsive" id="landing_logo" src="{% static "images/mukti_logo_big.png"%}">
+			<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4>
+
+		</header>
+	</section>
+
+	<!-- Scroll down button -->
+	<footer class="p-footer p-scrolldown">
+		<a href="#when">
+			<div class="arrow-d">
+				<div class="before">Tell&nbsp;me</div>
+				<div class="after">When</div>
+				<div id="next_page_circle" class="circle"></div>
+			</div>
+		</a>                        
+	</footer>
+</div>
+<!-- End of home page -->
+
+<!-- Begin of timer page -->
+<div class="section page-when page page-cent" id="s-when">
+	<section class="content">
+		<div class="clock clock-countdown">
+			<div class="site-config"
+			data-date="01/20/2017 18:30:00" 
+			data-date-timezone="+0"
+			></div>
 			<header class="header">
-
-				<img class="img-responsive" id="landing_logo" src="{% static "images/mukti_logo_big.png"%}">
-				<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4>
-
+				Magical Exuberance <strong>begins in</strong>
 			</header>
-		</section>
-
-		<!-- Scroll down button -->
-		<footer class="p-footer p-scrolldown">
-			<a href="#when">
-				<div class="arrow-d">
-					<div class="before">Tell&nbsp;me</div>
-					<div class="after">When</div>
-					<div id="next_page_circle" class="circle"></div>
-				</div>
-			</a>                        
-		</footer>
-	</div>
-	<!-- End of home page -->
-
-	<!-- Begin of timer page -->
-	<div class="section page-when page page-cent" id="s-when">
-		<section class="content">
-			<div class="clock clock-countdown">
-				<div class="site-config"
-				data-date="01/20/2017 18:30:00" 
-				data-date-timezone="+0"
-				></div>
-				<header class="header">
-					Magical Exuberance <strong>begins in</strong>
-				</header>
-				<div class="elem-left">
-					<div class="digit hours">00</div>
-					<div class="text">hrs</div>
-				</div>						
-				<div class="elem-center">
-					<!-- Optional text at top or image logo -->
-					<!--<span class="text top">here in</span>-->
-					<!-- Optional logo at top -->
-					<span class="text top">
+			<div class="elem-left">
+				<div class="digit hours">00</div>
+				<div class="text">hrs</div>
+			</div>						
+			<div class="elem-center">
+				<!-- Optional text at top or image logo -->
+				<!--<span class="text top">here in</span>-->
+				<!-- Optional logo at top -->
+				<span class="text top">
 					<!--Logo for clock-->
-					</span>
-					<div class="digit days">000</div>
-					<div class="text">days</div>
-				</div>
-				<div class=" elem-right">
-					<div class="digit minutes">00</div>
-					<div class="text">min</div>
-				</div>
+				</span>
+				<div class="digit days">000</div>
+				<div class="text">days</div>
+			</div>
+			<div class=" elem-right">
+				<div class="digit minutes">00</div>
+				<div class="text">min</div>
+			</div>
 
-				<!-- second knob here -->
-				<div class="second">
-					<input class="knob container" 
-					id="second-knob"
-					data-width="400"
-					data-height="400"
-					data-displayInput=false
-					data-fgColor="#fff"
-					data-bgColor="rgba(255,255,255,0)"
-					data-thickness=".07"
-					value="0"
-					data-displayPrevious=true
-					data-max="6000"
-					/>
-				</div>
-			</div>                   
+			<!-- second knob here -->
+			<div class="second">
+				<input class="knob container" 
+				id="second-knob"
+				data-width="400"
+				data-height="400"
+				data-displayInput=false
+				data-fgColor="#fff"
+				data-bgColor="rgba(255,255,255,0)"
+				data-thickness=".07"
+				value="0"
+				data-displayPrevious=true
+				data-max="6000"
+				/>
+			</div>
+		</div>                   
 
-		</section>                
-		<footer class="p-footer p-scrolldown">
-			<a href="#events">
-				<div class="arrow-d">
-					<div class="before">The&nbsp;</div>
-					<div class="after">Events</div>
-					<div class="circle"></div>
-				</div>
-			</a>                        
-		</footer>
-	</div>
+	</section>                
+	<footer class="p-footer p-scrolldown">
+		<a href="#keynote">
+			<div class="arrow-d">
+				<div class="before">The&nbsp;</div>
+				<div class="after">Keynote</div>
+				<div class="circle"></div>
+			</div>
+		</a>                        
+	</footer>
+</div>
 <!-- End of timer page -->
 <!-- Keynote speker page-->
 <div class="section  page page-cent" id="s-keynote">
@@ -100,35 +100,50 @@
 			<h1 style="color: white">Keynote page</h1>
 		</header>
 	</section>
+	<footer class="p-footer p-scrolldown">
+		<a href="#events">
+			<div class="arrow-d">
+				<div class="before">The&nbsp;</div>
+				<div class="after">Events</div>
+				<div class="circle"></div>
+			</div>
+		</a>                        
+	</footer>
 </div>
 <!--Keynote speaker page ends-->
 
 <!--Start of event page-->
-	<div class="section  page page-cent" id="s-events">
-	  <section class="content">
-	    <!--Carousel-->
-	    <header class="header">
-	    	<h2> Events</h2>
-	    </header>
-		<div class="carousel" data-flickity='{ "autoPlay": 1500}'>
-  			<div class="carousel-cell">
-  				<!-- You can add <img> tags within these divs here-->
-  			</div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-  			<div class="carousel-cell"></div>
-		</div>
+<div class="section  page carousel-page" id="s-events">
+	<section class="content">
+		<header class="header">
+			<h2> Events</h2>
+		</header>
+		<!--Carousel-->
+		<!--  centerx class is used in main.js to initialize slick-->
+		<!-- sliderx is used in main.css to style width and all but there are glitches I feel-->
+		<section class="centerx sliderx">
+			{% for event in all_events %}
+			<a class="events-slide-link" href="{{ event.get_absolute_url }}">
+				<div class="event-slide-wrapper">
+					<img src="{{ event.logo.url }}">
+					<h1 class="event-carousal-name">{{ event.name }}</h1>
+				</div>
+			</a>
+			{% endfor %}
+		</section>
 		<!--Carousel ends-->
-	  </section>
-	</div>
+	</section>
+
+	<footer class="p-footer p-scrolldown">
+		<a href="#about">
+			<div class="arrow-d">
+				<div class="before">About&nbsp;</div>
+				<div class="after">Us</div>
+				<div class="circle"></div>
+			</div>
+		</a>                        
+	</footer>
+</div>
 <!-- Events page ends-->
 
 <!-- About us page-->
@@ -138,6 +153,16 @@
 			<h1 style="color: white"> About us page</h1>
 		</header>
 	</section>
+
+	<footer class="p-footer p-scrolldown">
+		<a href="#contact">
+			<div class="arrow-d">
+				<div class="before">Stay&nbsp;in</div>
+				<div class="after">Touch</div>
+				<div class="circle"></div>
+			</div>
+		</a>                        
+	</footer>
 </div>
 <!--About us page ends-->
 
@@ -166,6 +191,7 @@
 	}
 </script>
 
+
 <script id="shader-vs" type="x-shader/x-vertex">
 	attribute vec3 vertexPosition;
 
@@ -177,5 +203,5 @@
 	}
 </script>
 <script type="text/javascript" src="{% static "js/particle-canvas.js" %}"></script>
-  
+
 {% endblock %}
