@@ -1,4 +1,6 @@
 {% extends "festflow/base.html" %}
+{% load staticfiles %}
+
 
 {% block body_contents %}
 <main class="page-main" id="mainpage">
@@ -12,15 +14,8 @@
 		<section class="content">
 			<header class="header">
 
-				<div class="h-left">
-					<h2><strong>MUKTI</strong> 2K17</h2>
-					<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4> <!--<a href="#when">-->
-				</div>
-
-				<div class="h-right">
-					<h3>#Coming <br>#Soon</h3>
-					<!--<h4 class="subhead"><a href="#when">-the only FOSS festival of Eastern India</a></h4>-->
-				</div>
+				<img class="img-responsive" id="landing_logo" src="{% static "images/mukti_logo_big.png"%}">
+				<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4>
 
 			</header>
 		</section>
@@ -31,7 +26,7 @@
 				<div class="arrow-d">
 					<div class="before">Tell&nbsp;me</div>
 					<div class="after">When</div>
-					<div class="circle"></div>
+					<div id="next_page_circle" class="circle"></div>
 				</div>
 			</a>                        
 		</footer>
