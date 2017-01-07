@@ -245,7 +245,19 @@ $(document).ready(function() {
         afterRender: function(){}
     });
 });
-
+/*Script  to Initialize Slick carousel*/
+$(document).ready(function(){
+  $(".centerx").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        autoplay: true,
+  autoplaySpeed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+});
+/*----------------*/
 
 /* Background slide */
 
