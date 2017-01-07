@@ -113,44 +113,23 @@
 <!--Keynote speaker page ends-->
 
 <!--Start of event page-->
-<div class="section  page page-cent" id="s-events">
+<div class="section  page carousel-page" id="s-events">
 	<section class="content">
 		<header class="header">
 			<h2> Events</h2>
 		</header>
-	<!--Carousel-->
-	   <!--  centerx class is used in main.js to initialize slick-->
-	   <!-- sliderx is used in main.css to style width and all but there are glitches I feel-->
+		<!--Carousel-->
+		<!--  centerx class is used in main.js to initialize slick-->
+		<!-- sliderx is used in main.css to style width and all but there are glitches I feel-->
 		<section class="centerx sliderx">
-			<div>
-				<img src="http://placehold.it/350x300?text=1">
-				<h1 style="color: white">Event 1</h1>
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=2">
-				<h1 style="color: white">Event 2</h1>
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=3">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=4">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=5">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=6">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=7">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=8">
-			</div>
-			<div>
-				<img src="http://placehold.it/350x300?text=9">
-			</div>
+			{% for event in all_events %}
+			<a class="events-slide-link" href="{{ event.get_absolute_url }}">
+				<div class="event-slide-wrapper">
+					<img src="{{ event.logo.url }}">
+					<h1 class="event-carousal-name">{{ event.name }}</h1>
+				</div>
+			</a>
+			{% endfor %}
 		</section>
 		<!--Carousel ends-->
 	</section>

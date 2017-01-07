@@ -5,10 +5,10 @@
     var method;
     var noop = function () {};
     var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeStamp', 'trace', 'warn'
     ];
     var length = methods.length;
     var console = (window.console = window.console || {});
@@ -26,7 +26,7 @@
 // Get height on Window resized
 $(window).on('resize',function(){
     var slideHeight = $('.slick-track').innerHeight();
-	return false;
+    return false;
 });
 
 
@@ -117,11 +117,11 @@ $(window).on('load', function(){
 /* 1. Clock attribute */
 
 var dateReadableText = 'Upcoming date';
-    if($('.site-config').attr('data-date-readable') && ($('.site-config').attr('data-date-readable') != '')){
-        $('.timeout-day').text('');
-        dateReadableText = $('.site-config').attr('data-date-readable');        
-        $('.timeout-day').text(dateReadableText);
-    }
+if($('.site-config').attr('data-date-readable') && ($('.site-config').attr('data-date-readable') != '')){
+    $('.timeout-day').text('');
+    dateReadableText = $('.site-config').attr('data-date-readable');        
+    $('.timeout-day').text(dateReadableText);
+}
 $('.clock-countdown').downCount({
     date: $('.site-config').attr('data-date'),
     offset: +10
@@ -179,8 +179,8 @@ $(function() {
         shuffle: true,
         slides: imageSlides,
     	//transition: [ 'zoomOut', 'burn' ],
-		animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
-    });
+      animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
+  });
 });
 
 /* Static video background **/
@@ -191,14 +191,14 @@ $(function(){
 /** youtube / vimeo background */
 $(function(){
     if(backgroundVideoUrl != 'none'){
-        
+
         //disable video background for smallscreen
         if($(window).width() > 640){
           $.okvideo({ source: backgroundVideoUrl,
-                    adproof: true
-                    });
-        }
-    }
+            adproof: true
+        });
+      }
+  }
 });
 
 /* 3. Slide */
@@ -209,53 +209,85 @@ var pageElem = $('.page');
 /** Init fullpage.js */
 $(document).ready(function() {
     $('#mainpage').fullpage({
-		menu: '#qmenu',
+      menu: '#qmenu',
 		anchors: ['home', 'when','keynote','events','about','contact'], //, 'register', 'about-us',
 //        verticalCentered: false,
 //        resize : false,
 //		responsive: 900,
-		scrollOverflow: true,
-        css3: false,
-        navigation: true,
-		onLeave: function(index, nextIndex, direction){
-			arrowElem.addClass('gone');
-			pageElem.addClass('transition');
+scrollOverflow: true,
+css3: false,
+navigation: true,
+onLeave: function(index, nextIndex, direction){
+   arrowElem.addClass('gone');
+   pageElem.addClass('transition');
 //			$('.active').removeClass('transition');
-			slideElem.removeClass('transition');
-			isSlide = false;
-		},
-        afterLoad: function(anchorLink, index){
-			arrowElem.removeClass('gone');
-			pageElem.removeClass('transition');
-			if(isSlide){
-				slideElem.removeClass('transition');
-			}
-		},
-		afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-			slideElem.removeClass('transition');
-			isSlide = true;
+slideElem.removeClass('transition');
+isSlide = false;
+},
+afterLoad: function(anchorLink, index){
+   arrowElem.removeClass('gone');
+   pageElem.removeClass('transition');
+   if(isSlide){
+    slideElem.removeClass('transition');
+}
+},
+afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+   slideElem.removeClass('transition');
+   isSlide = true;
 //			$('.slide').addClass('transition');
-        },
-		onSlideLeave: function( anchorLink, index, slideIndex, direction){
+},
+onSlideLeave: function( anchorLink, index, slideIndex, direction){
 //			$('.slide').removeClass('transition');
-			if(isSlide){
-				slideElem.addClass('transition');
-			}
-        },
-        afterRender: function(){}
-    });
+if(isSlide){
+    slideElem.addClass('transition');
+}
+},
+afterRender: function(){}
+});
 });
 /*Script  to Initialize Slick carousel*/
 $(document).ready(function(){
   $(".centerx").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        autoplay: true,
-  autoplaySpeed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    variableWidth: false,
+    responsive: [
+    {
+        breakpoint: 693,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    },
+    {
+        breakpoint: 893,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+        }
+    },
+    {
+        breakpoint: 1093,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+        }
+    },
+    {
+        breakpoint: 1293,
+        settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+        }
+    }
+    ]
+    
+});
 });
 /*----------------*/
 
