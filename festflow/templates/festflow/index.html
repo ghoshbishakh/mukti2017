@@ -1,9 +1,12 @@
 {% extends "festflow/base.html" %}
+{% load staticfiles %}
+
 
 {% block body_contents %}
 <main class="page-main" id="mainpage">
 	<!-- Begin of home page -->
 	<div class="section page-home page page-cent" id="s-home">
+		<canvas id="particle-canvas"></canvas>
 		<!-- Logo -->
 		<!--<div class="logo-container">
 			
@@ -12,15 +15,8 @@
 		<section class="content">
 			<header class="header">
 
-				<div class="h-left">
-					<h2><strong>MUKTI</strong> 2K17</h2>
-					<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4> <!--<a href="#when">-->
-				</div>
-
-				<div class="h-right">
-					<h3>#Coming <br>#Soon</h3>
-					<!--<h4 class="subhead"><a href="#when">-the only FOSS festival of Eastern India</a></h4>-->
-				</div>
+				<img class="img-responsive" id="landing_logo" src="{% static "images/mukti_logo_big.png"%}">
+				<h4 style="color:white; font-family:Gruppo;"><i>-the only FOSS festival of Eastern India</i></h4>
 
 			</header>
 		</section>
@@ -31,7 +27,7 @@
 				<div class="arrow-d">
 					<div class="before">Tell&nbsp;me</div>
 					<div class="after">When</div>
-					<div class="circle"></div>
+					<div id="next_page_circle" class="circle"></div>
 				</div>
 			</a>                        
 		</footer>
@@ -157,4 +153,29 @@
 
 
 </main>
+{% endblock %}
+
+
+{% block extrajs %}
+<script id="shader-fs" type="x-shader/x-fragment">
+	#ifdef GL_ES
+	precision highp float;
+	#endif
+	void main(void) {
+		gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+	}
+</script>
+
+<script id="shader-vs" type="x-shader/x-vertex">
+	attribute vec3 vertexPosition;
+
+	uniform mat4 modelViewMatrix;
+	uniform mat4 perspectiveMatrix;
+
+	void main(void) {
+		gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+	}
+</script>
+<script type="text/javascript" src="{% static "js/particle-canvas.js" %}"></script>
+  
 {% endblock %}
