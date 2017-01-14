@@ -1,32 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Complete Profile</title>
-</head>
-<body>
-	{% if user.is_authenticated %}
-	<p>Welcome <b>{{ user.first_name }}</b>!</p>
-	<h5>Here is your profile information:</h5>
-	<p>First Name: <b>{{ user.first_name }}</b></p>
-	<p>Last Name: <b>{{ user.last_name }}</b></p>
-	<p>Email: {{ user.email }}</p>
-	{% endif %}
+{% extends "festflow/base.html" %}
+{% load staticfiles %}
 
-	<h2>Please complete your profile to continue:</h2><br>
-	{% if profile_form %}
-	<form action="." method="post">
-		{% csrf_token %}
-		<label class="control-label col-sm-4" for="id_institute_name">Institute name:</label>
-		<input class="form-control" id="id_institute_name" maxlength="255" name="institute_name" type="text" required />
-		
-		<label class="control-label col-sm-4" for="id_degree_name">Degree name:</label>
-		<input class="form-control" id="id_degree_name" maxlength="255" name="degree_name" type="text" placeholder="eg: B.Tech"required />
-		<label class="control-label col-sm-4" for="id_major_subject_name">Major subject name:</label>
-		<input class="form-control" id="id_major_subject_name" maxlength="255" name="major_subject_name" type="text" placeholder="eg: ECE or CSE....etc "required />
-		<label class="control-label col-sm-4" for="id_phone_number">Phone number:</label>
-		<input class="form-control" id="id_phone_number" maxlength="15" name="phone_number" type="text" required />
-		<input type="submit" value="Submit" />
-	</form>
-	{% endif %}
-</body>
-</html>
+{% block body_contents %}
+
+<!-- BEGIN OF site header Menu -->
+<header class="header-top">
+	<div class="logo">
+		<a href="/#home">
+			<img src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
+		</a>
+	</div>
+	<div class="menu clearfix">
+		<a href="/#events">Events</a>
+		<!-- Add other menu similar to "about" here -->
+		<a href="/#contact">contact</a>
+	</div>
+</header>
+<!-- END OF site header Menu-->
+<main class="page-main" id="mainpage">
+
+	<div class="section  page page-cent" id="s-complete-profile">
+		<div class="complete-profile-wrapper">
+			{% if user.is_authenticated %}
+			<p>Welcome <b>{{ user.first_name }}</b>!</p>
+			<h3>Here is your profile information:</h3>
+			<p>First Name: <b>{{ user.first_name }}</b></p>
+			<p>Last Name: <b>{{ user.last_name }}</b></p>
+			<p>Email: {{ user.email }}</p>
+			{% endif %}
+
+			<h2>Please complete your profile to continue:</h2><br>
+			{% if profile_form %}
+			<form action="." method="post">
+				{% csrf_token %}
+				<label class="control-label col-sm-4" for="id_institute_name">Institute name:</label>
+				<input class="form-control" id="id_institute_name" maxlength="255" name="institute_name" type="text" required />
+
+				<label class="control-label col-sm-4" for="id_degree_name">Degree name:</label>
+				<input class="form-control" id="id_degree_name" maxlength="255" name="degree_name" type="text" placeholder="eg: B.Tech"required />
+				<label class="control-label col-sm-4" for="id_major_subject_name">Major subject name:</label>
+				<input class="form-control" id="id_major_subject_name" maxlength="255" name="major_subject_name" type="text" placeholder="eg: ECE or CSE....etc "required />
+				<label class="control-label col-sm-4" for="id_phone_number">Phone number:</label>
+				<input class="form-control" id="id_phone_number" maxlength="15" name="phone_number" type="text" required />
+				<input class="btn button" type="submit" value="Submit" />
+			</form>
+			{% endif %}
+
+		</div>
+	</div>
+
+</main>
+
+{% endblock %}

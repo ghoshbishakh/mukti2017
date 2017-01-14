@@ -22,6 +22,10 @@ body {
 	background: #000;
 }
 
+h1, h2, h3, h4, h5 {
+	color: #fff;
+}
+
 .header-top {
 	background: rgba(0,0,0,0.65);
 }
@@ -109,11 +113,11 @@ body {
 /* Event Page */
 .event-page-content-wrapper {
 	background-image: url('../images/bgh1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 8%;
-    padding-bottom: 3em; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	padding: 8%;
+	padding-bottom: 3em; 
 	padding-top: 4em;
 	overflow: auto;
 	width: 100%;
@@ -140,4 +144,63 @@ body {
 .event-problem-statement-link {
 	font-size: 1.4em;
 	margin: 1.2em 0;
+}
+
+/* Login page */
+#s-login {
+	background-image: url('../images/bgh1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	padding: 8%;
+	padding-bottom: 3em; 
+	padding-top: 4em;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.login-btn-img {
+	width: 24em;
+	max-width: 100%;
+	margin: 1em auto;
+	clear: both;
+	float: none;
+	display: block;
+	transition: all 0.5s
+}
+
+.login-btn-img:hover {
+	box-shadow: 0 0 0.2em 0 #fff;
+}
+
+#registerPageHeading {
+	text-shadow: 0px 0px 3px #000;
+}
+
+
+/* complete profile page */
+#s-complete-profile {
+	background-image: url('../images/bgh1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	padding: 8%;
+	padding-bottom: 3em; 
+	padding-top: 4em;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.complete-profile-wrapper label {
+	color: #fff;
+}
+
+.complete-profile-wrapper {
+	background: rgba(0,0,0, 0.6);
+	padding: 1em;
+	box-shadow: 0 0 0.3em 0 #000;
 }

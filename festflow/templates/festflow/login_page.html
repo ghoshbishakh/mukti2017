@@ -5,40 +5,46 @@
 
 <!-- BEGIN OF site header Menu -->
 <header class="header-top">
-	<div class="logo">
-		<a href="/#home">
-			<img style="height:70px;" src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
-		</a>
-	</div>
-	<div class="menu clearfix">
-		<a href="/#events">Events</a>
-		<!-- Add other menu similar to "about" here -->
-		<a href="/#contact">contact</a>
-	</div>
+    <div class="logo">
+        <a href="/#home">
+            <img src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
+        </a>
+    </div>
+    <div class="menu clearfix">
+        <a href="/#events">Events</a>
+        <!-- Add other menu similar to "about" here -->
+        <a href="/#contact">contact</a>
+    </div>
 </header>
 <!-- END OF site header Menu-->
 <main class="page-main" id="mainpage">
 
+    <div class="section  page page-cent" id="s-login">
 
-	{% if user.is_authenticated %}
-	<!--User is logged in-->
-	<p>You are logged in as : <i> {{ user.username }}</i> !</p>
-	<p>First Name: <strong>{{ user.first_name }}</strong></p>
-	<p>Last Name: <strong>{{ user.last_name }}</strong></p>
-	<p>Email: {{ user.email }}</p>
-	<a href="/logout"><button> LogOut</button></a>
-	{% else %}
 
-	<!--User is not logged in-->
-	<h2>Register NOW!</h2>
 
-	<a href="/login/facebook/?next=/">
-		<span>Sign in with facebook</span>
-	</a>
-	<a href="/login/google-oauth2/?next=/">
-		<span>Sign in with google</span>
-	</a>
-	{% endif %}
+            {% if user.is_authenticated %}
+            <!--User is logged in-->
+            <p>You are logged in as : <i> {{ user.username }}</i> !</p>
+            <p>First Name: <strong>{{ user.first_name }}</strong></p>
+            <p>Last Name: <strong>{{ user.last_name }}</strong></p>
+            <p>Email: {{ user.email }}</p>
+            <a href="/logout"><button class="button"> LogOut</button></a>
+            {% else %}
+
+            <!--User is not logged in-->
+            <center>
+            <h2 id="registerPageHeading">Register NOW!</h2>
+            </center>
+
+            <a href="/login/facebook/?next=/">
+                <img class="login-btn-img" src="{% static "images/loginButton/fb.jpg" %}">
+            </a>
+            <a href="/login/google-oauth2/?next=/">
+                <img class="login-btn-img" src="{% static "images/loginButton/google.jpg" %}">
+            </a>
+            {% endif %}
+    </div>
 
 </main>
 
