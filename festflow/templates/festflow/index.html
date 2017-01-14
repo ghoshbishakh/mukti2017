@@ -7,7 +7,7 @@
 <header class="header-top">
 	<div class="logo">
 		<a href="#home">
-			<img style="height:70px;" src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
+			<img src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
 		</a>
 	</div>
 	<div class="menu clearfix">
@@ -202,9 +202,11 @@
 <!-- About us page-->
 <div class="section  page page-cent" id="s-about">
 	<section class="content">
-		<header class=header>
-			<h1 style="color: white"> About us page</h1>
+		<header class="p-title">
+			<h3>About Mukti</h3>
 		</header>
+		<p>MUKTI, the only FOSS Festival of Eastern India, is a three-day meet at NIT Durgapur where we celebrate the freedom of Open Source.</p>
+		<p>Owing to the success attained by it in recent years, it attracts a lot of participation and has been a venue where students of various age groups and domains have come together to get introduced to FOSS, interact with each other and share their experiences. The intense atmosphere of competition is doubled up with Talks and Workshops by few of the brightest and most active minds in the Indian Open Source community.</p>
 	</section>
 
 	<footer class="p-footer p-scrolldown">
@@ -220,12 +222,63 @@
 <!--About us page ends-->
 
 <!-- Contact page-->
-<div class="section  page page-cent" id="s-contact">
+<div class="section page-contact page page-cent  bg-color" data-bgcolor="rgba(95, 25, 208, 0.88)s" id="s-contact">
+	<!-- Begin of contact information -->
 	<section class="content">
-		<header class=header>
-			<h1 style="color: white"> Contact us page</h1>
-		</header>
-	</section>
+		<header class="p-title">
+			<h3>Contact<i class="ion ion-location">
+			</i>
+		</h3>
+	</header>
+	<!-- Begin Of Page SubSction -->
+	<div class="contact">
+		<div class="row">
+			<div class="medium-6 columns left">
+				<ul>
+					<li>
+						<h4>Email</h4>
+						<p><a href="mailto://contact@nitdgplug.org">contact@nitdgplug.org</a></p>
+					</li>
+					<li>
+						<h4>Address</h4>
+						<p>NIT Durgapur
+							<br>West Bengal-713209</p>
+						</li>
+						<li>
+							<h4>Phone</h4>
+							<p>9614826204</p>
+						</li>
+					</ul>
+				</div>
+				<div class="medium-6 columns social-links right">
+					<ul>
+
+						<!-- legal notice -->
+						<li class="show-for-medium-up">
+							<h4>Website</h4>
+							<p><a href="http://www.nitdgplug.org" target="_blank">www.nitdgplug.org</a></p>
+						</li>
+						<li  class="show-for-medium-up">
+							<h4>Find us on</h4>
+							<!-- Begin of Social links -->
+							<div class="socialnet">
+								<a href="https://web.facebook.com/muktinitdurgapur/?fref=ts"><i class="ion ion-social-facebook"></i></a>
+								<a href="#"><i class="ion ion-social-twitter"></i></a>
+							</div>
+							<!-- End of Social links -->
+						</li>
+						<li>
+							<p>
+								<img src="{% static "images/club_logofp3.png" %}" alt="Logo" class="logo" style="margin-left:80px;" >
+							</p>
+							<p class="small"> <strong>NIT Durgapur<a href="http://www.nitdgp.ac.in/"></a></strong></p>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</section> 
 </div>
 <!--Contact page ends-->
 

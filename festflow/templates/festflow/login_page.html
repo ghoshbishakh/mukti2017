@@ -1,9 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-</head>
-<body>
+{% extends "festflow/base.html" %}
+{% load staticfiles %}
+
+{% block body_contents %}
+
+<!-- BEGIN OF site header Menu -->
+<header class="header-top">
+	<div class="logo">
+		<a href="/#home">
+			<img style="height:70px;" src="{% static "images/mktiLWC.png" %}" alt="Logo Brand">
+		</a>
+	</div>
+	<div class="menu clearfix">
+		<a href="/#events">Events</a>
+		<!-- Add other menu similar to "about" here -->
+		<a href="/#contact">contact</a>
+	</div>
+</header>
+<!-- END OF site header Menu-->
+<main class="page-main" id="mainpage">
 
 
 	{% if user.is_authenticated %}
@@ -26,5 +40,6 @@
 	</a>
 	{% endif %}
 
-</body>
-</html>
+</main>
+
+{% endblock %}
