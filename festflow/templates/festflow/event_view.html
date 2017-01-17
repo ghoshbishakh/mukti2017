@@ -7,7 +7,7 @@
 
 {% block extra_head %}
 
-<meta name="description" content="MUKTI 2017 - {{ event.name }} : {{ event.description }}">
+<meta name="description" content="MUKTI 2017 - {{ event.name }} : {{ event.description|striptags }}">
 <meta name="keywords" content="MUKTI,MUKTI 2K17,{{ event.name }}" />
 <meta name="author" content="GNU Linux Users' Group">
 
@@ -15,7 +15,7 @@
 <meta property="og:title" content="Mukti 2017 | {{ event.name }}"/>
 <meta property="og:url" content="http://mkti.in/events/{{event.identifier}}" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="MUKTI 2017 - {{ event.name }} : {{ event.description }}" />
+<meta property="og:description" content="MUKTI 2017 - {{ event.name }} : {{ event.description|striptags }}" />
 {% if event.logo %}
 <meta property="og:image" content="http://mkti.in{{ event.logo.url }}" />
 {% else %}
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="">
 <meta name="twitter:title" content="MUKTI 2017 | {{ event.name }}">
-<meta name="twitter:description" content="MUKTI 2017 - {{ event.name }} : {{ event.description }}">
+<meta name="twitter:description" content="MUKTI 2017 - {{ event.name }} : {{ event.description|striptags }}">
 <meta name="twitter:image" content="http://mkti.in{{ event.logo.url }}">
 
 {% endblock %}
