@@ -210,7 +210,7 @@ var pageElem = $('.page');
 $(document).ready(function() {
     $('#mainpage').fullpage({
       menu: '#qmenu',
-		anchors: ['home', 'when','keynote','events','about','contact'], //, 'register', 'about-us',
+		anchors: ['home', 'when','keynote','events','about','contact', 'sponsors'], //, 'register', 'about-us',
 //        verticalCentered: false,
 //        resize : false,
 //		responsive: 900,
